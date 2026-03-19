@@ -1,0 +1,259 @@
+:root {
+    --primary: #d4a574;
+    --secondary: #2c3e50;
+    --bg-dark: #1a1a2e;
+    --bg-light: #16213e;
+    --text: #eee;
+    --accent: #e94560;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, var(--bg-dark) 0%, var(--bg-light) 100%);
+    color: var(--text);
+    min-height: 100vh;
+}
+
+header {
+    background: rgba(0,0,0,0.3);
+    padding: 1rem 2rem;
+    border-bottom: 3px solid var(--primary);
+}
+
+nav {
+    margin-top: 1rem;
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+nav button {
+    background: var(--secondary);
+    color: var(--text);
+    border: 2px solid var(--primary);
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all 0.3s;
+}
+
+nav button:hover {
+    background: var(--primary);
+    color: var(--bg-dark);
+}
+
+.map-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1rem;
+    padding: 2rem;
+}
+
+.map-card {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid var(--primary);
+    border-radius: 10px;
+    padding: 1rem;
+    transition: transform 0.2s;
+}
+
+.map-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 20px rgba(212, 165, 116, 0.3);
+}
+
+.badge {
+    display: inline-block;
+    padding: 0.2rem 0.5rem;
+    border-radius: 3px;
+    font-size: 0.8rem;
+    margin-right: 0.5rem;
+}
+
+.tier-5 { background: #4a90e2; }
+.tier-6 { background: #7ed321; }
+.tier-7 { background: #f5a623; }
+.tier-8 { background: #d0021b; }
+
+.type-SAFE { background: #2ecc71; }
+.type-YELLOW { background: #f1c40f; color: #000; }
+.type-RED { background: #e74c3c; }
+.type-BLACK { background: #2c3e50; }
+
+.price-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 2rem;
+}
+
+.price-table th, .price-table td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.price-table th {
+    background: rgba(0,0,0,0.3);
+    color: var(--primary);
+}
+
+.sell-price { color: #e74c3c; }
+.buy-price { color: #2ecc71; }
+
+.search-section {
+    padding: 2rem;
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+input, select {
+    padding: 0.5rem 1rem;
+    background: rgba(255,255,255,0.1);
+    border: 1px solid var(--primary);
+    color: var(--text);
+    border-radius: 5px;
+}
+
+button {
+    padding: 0.5rem 2rem;
+    background: var(--accent);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+main {
+    padding: 2rem;
+    min-height: calc(100vh - 200px);
+}
+
+h1 {
+    color: var(--primary);
+    text-align: center;
+    font-size: 2.5rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.loading {
+    text-align: center;
+    padding: 2rem;
+    font-size: 1.2rem;
+    color: var(--primary);
+}
+
+.error {
+    color: var(--accent);
+    background: rgba(233, 69, 96, 0.1);
+    border: 1px solid var(--accent);
+    padding: 1rem;
+    border-radius: 5px;
+    margin: 1rem;
+}
+
+.success {
+    color: #2ecc71;
+    background: rgba(46, 204, 113, 0.1);
+    border: 1px solid #2ecc71;
+    padding: 1rem;
+    border-radius: 5px;
+    margin: 1rem;
+}
+
+.resource-icons {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+.resource-icon {
+    width: 24px;
+    height: 24px;
+    border-radius: 3px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.7rem;
+    font-weight: bold;
+}
+
+.resource-wood { background: #8B4513; }
+.resource-ore { background: #708090; }
+.resource-fiber { background: #F4A460; }
+.resource-hide { background: #D2691E; }
+.resource-rock { background: #696969; }
+
+.crafting-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.crafting-card {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid var(--primary);
+    border-radius: 10px;
+    padding: 1.5rem;
+}
+
+.profit-calculator {
+    max-width: 800px;
+    margin: 2rem auto;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid var(--primary);
+    border-radius: 10px;
+    padding: 2rem;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--primary);
+}
+
+.form-group input, .form-group select {
+    width: 100%;
+}
+
+.result-section {
+    margin-top: 2rem;
+    padding: 1rem;
+    background: rgba(0,0,0,0.3);
+    border-radius: 5px;
+}
+
+.profit-positive {
+    color: #2ecc71;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.profit-negative {
+    color: #e74c3c;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.item-icon {
+    width: 32px;
+    height: 32px;
+    margin-right: 0.5rem;
+    vertical-align: middle;
+}
