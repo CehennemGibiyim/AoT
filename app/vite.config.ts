@@ -7,7 +7,7 @@ import { inspectAttr } from 'kimi-plugin-inspect-react'
 export default defineConfig({
   base: '/AoT/',
   build: {
-    outDir: "docs",
+    outDir: 'dist',
   },
   plugins: [inspectAttr(), react()],
   resolve: {
